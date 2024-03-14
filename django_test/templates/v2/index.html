@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Button</title>
+<style>
+    #heart {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 50px;
+        cursor: pointer;
+    }
+
+    #heart.clicked::after {
+        content: "\2764";
+        color: red;
+    }
+
+    #heart.clicked {
+        animation: fadeOut 0s forwards;
+    }
+
+    @keyframes fadeOut {
+        to {
+            opacity: 0;
+            display: none;
+        }
+    }
+    
+</style>
+</head>
+<body>
+<div id="heart" onclick="toggleHeart()">❤️</div>
+<script>
+function toggleHeart() {
+    var heart = document.getElementById("heart");
+    if (!heart.classList.contains("clicked")) {
+        heart.classList.add("clicked");
+        setTimeout(function() {
+            window.location.href = "https://nahhh.tistory.com/";
+        }, 1000);
+    }
+}
+</script>
+</body>
+</html>
