@@ -18,9 +18,11 @@ from django.contrib import admin
 from django.urls import path, include
 from v1 import views
 from v2 import views
+from products import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('v2/', include('v2.urls')),
-    path('v1/', include('v1.urls'))
+    path('v1/', include('v1.urls')),
+    path('products/', include('products.urls')),
 ]
