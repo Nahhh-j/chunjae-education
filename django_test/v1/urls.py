@@ -5,4 +5,5 @@ from .views import *
 app_name = 'v1'
 urlpatterns = [
     path("", views.v1_list),
+    path("<int:id>/", views.v1_detail),
 ]

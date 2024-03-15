@@ -18,9 +18,22 @@ from rest_framework.decorators import api_view
 #     article = Article.objects.get(id=id)
 #     return HttpResponse(article)
 
-@api_view(['GET'])
+@api_view(['GET', 'POST'])
 def v1_list(request):
-    v1 = Article.objects.all()
-    Serializer = ArticleSerializer(v1, many=True)
-    return Response(Serializer.data)
+    if request.method == 'GET':
+        v1 = Article.objects.all()
+        Serializer = ArticleSerializer(v1, many=True)
+        return Response(Serializer.data)
     
+    elif request.method == 'POST':
+        data = request.data
+        Serializer = ArticleSerializer(data=data)
+        if Serializer.is_valid(raise_exception=True):
+            Serializer.save()
+            return Response(Serializer.data, status=201)
+
+@api_view(['GET'])
+def v1_detail(request, id):
+    v1 = Article.objects.get(id=id)
+    serializer = ArticleSerializer(v1)
+    return Response(serializer.data)
