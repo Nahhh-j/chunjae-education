@@ -32,8 +32,24 @@ def v1_list(request):
             Serializer.save()
             return Response(Serializer.data, status=201)
 
-@api_view(['GET'])
+@api_view(['GET', 'PUT', 'DELETE'])
 def v1_detail(request, id):
-    v1 = Article.objects.get(id=id)
-    serializer = ArticleSerializer(v1)
-    return Response(serializer.data)
+    if request.method == 'GET':
+        v1 = Article.objects.get(id=id)
+        serializer = ArticleSerializer(v1)
+        return Response(serializer.data)
+    elif request.method == 'PUT':
+        v1 = Article.objects.get(id=id)
+        data = request.data
+
+        serializer = ArticleSerializer(v1, data=data)
+
+        if serializer.is_valid(raise_exception=True):
+            serializer.save()
+            return Response(serializer.data)
+        
+    elif request.method == 'DELETE':
+        v1 = Article.objects.get(id=id)
+
+        v1.delete()
+        return Response(status=204) # no content
