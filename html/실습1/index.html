@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Beautiful Website</title>
+    <style>
+        /* Add your CSS styling here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #f1f1f1;
+            padding: 18px 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+        section {
+            margin: 65px 0;
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .box {
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 10px;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        .button {
+            background-color: #d67fb3;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .divider {
+            border-top: 1px solid #ccc;
+            margin: 20px 0;
+        }
+        .more-container {
+            display: flex;
+            justify-content: space-around;
+        }
+        .more-item {
+            flex: 1;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <button class="button">APPAREL SHOP</button>
+        </div>
+        <nav>
+            <button class="button">HOME</button>
+            <button class="button">PRODUCTS</button>
+        </nav>
+    </header>
+    <section>
+        <img src="image/top_image.jpg" alt="Beautiful Image" style="width: 100%;">
+    </section>
+    <div class="divider"></div>
+    <section>
+        <div class="container">
+            <div>
+                <img src="image/image1.jpg" alt="Rounded Image" style="width: 200px; border-radius: 10%;">
+            </div>
+            <div>
+                <h1>나희의 블로그입니당 ,,,</h1>
+                <p>저희집 막내는 별이고 토끼에요 11살이에요</p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <h2>Contact Us</h2>
+        <div class="container">
+            <div class="box">
+                <h3>Username</h3>
+                <input type="text" placeholder="Enter username">
+                <h3>Email</h3>
+                <input type="email" placeholder="Enter email">
+                <div class="button-container">
+                    <button class="button">Send</button>
+                </div>
+            </div>
+            <img src="image/contact_image.png" alt="Contact Image" style="width: 230px;">
+        </div>
+    </section>
+    <section>
+        <h2>More</h2>
+        <div class="more-container">
+            <div class="more-item">
+                <img src="image/image2.png" alt="Email Icon" style="width: 50px;">
+                <h3>Email Address</h3>
+                <p>nahee2253@naver.com</p>
+            </div>
+            <div class="more-item">
+                <img src="image/image3.png" alt="Phone Icon" style="width: 50px;">
+                <h3>Phone Number</h3>
+                <p>010-0000-0000</p>
+            </div>
+            <div class="more-item">
+                <img src="image/image4.png" alt="Map Icon" style="width: 50px;">
+                <h3>Location</h3>
+                <p>성남시 수정구</p>
+            </div>
+            <div class="more-item">
+                <img src="image/image5.png" alt="Clock Icon" style="width: 50px;">
+                <h3>Working Hours</h3>
+                <p>9am ~ 6pm</p>
+            </div>
+        </div>
+    </section>
+    <div class="divider"></div>
+    <section>
+        <h2>• • • •</h2>
+    </section>
+</body>
+</html>

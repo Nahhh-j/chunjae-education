@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>숙소 예약</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            margin: 20px auto;
+            max-width: 600px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        h1, h2, h3 {
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="email"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        input[type="file"] {
+            margin-bottom: 15px;
+        }
+        .checkbox-container {
+            margin-bottom: 15px;
+        }
+        .checkbox-container label {
+            display: inline-block;
+            margin-right: 20px;
+        }
+        .btn-container {
+            text-align: center;
+        }
+        .btn {
+            background-color: #7ebcff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .divider {
+            border-top: 1px solid #ccc;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>숙소 예약</h1>
+        <h2>신상 정보</h2>
+        <form action="https://postman-echo.com/post" method="post">
+            <label for="name">이름:</label>
+            <input type="text" id="name" name="name" placeholder="ex)조나희" required>
+            <label for="email">이메일:</label>
+            <input type="email" id="email" name="email" placeholder="ex)nahee2253" required>
+            <label for="profile-pic">예약자 사진:</label>
+            <input type="file" id="profile-pic" name="profile-pic">
+        
+            <div class="divider"></div>
+        
+            <h2>상세 정보</h2>
+            <h3>선호 객실 타입</h3>
+            <div class="checkbox-container">
+                <label for="city-view"><input type="checkbox" id="city-view" name="room-type" value="도시뷰"> 도시뷰</label>
+                <label for="lake-view"><input type="checkbox" id="lake-view" name="room-type" value="레이크뷰"> 레이크뷰</label>
+                <label for="mountain-view"><input type="checkbox" id="mountain-view" name="room-type" value="마운틴뷰"> 마운틴뷰</label>
+            </div>
+        
+            <div class="divider"></div>
+        
+            <h3>동행자 정보</h3>
+            <label for="guests">인원수:</label>
+            <select id="guests" name="guests">
+                <option value="1">1명</option>
+                <option value="2">2명</option>
+                <option value="3">3명</option>
+                <option value="4">4명</option>
+                <option value="5">5명</option>
+                <opthon value="6">6명</opthon>
+
+            </select>
+        
+            <div class="divider"></div>
+        
+            <h2>기타</h2>
+            <label for="requests">요청사항:</label>
+            <textarea id="requests" name="requests" rows="4"></textarea>
+        
+            <div class="divider"></div>
+        
+            <div class="btn-container">
+                <button type="submit" class="btn">전송</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
