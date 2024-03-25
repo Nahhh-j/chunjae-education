@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>채용 공고 사이트</title>
+    <style>
+        /* General styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        /* Header styles */
+        header {
+            background-color: #ffffff;
+            border-bottom: 1px solid #dee2e6;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+        }
+
+        .header-buttons {
+          display: flex;
+          align-items: center;
+        }
+
+        .header-buttons img {
+            width: 20px;
+            cursor: pointer;
+            padding: 8px;
+        }
+        /* Main content styles */
+        .job-announcement {
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+            border: 1px solid #dee2e6;
+        }
+        .company-info {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .company-name {
+            font-size: 14px;
+            margin-right: 10px;
+        }
+        .days-left {
+            font-size: 14px;
+        }
+        .announcement-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .divider {
+            border-top: 1px solid #dee2e6;
+            margin-bottom: 20px;
+        }
+        .tag {
+            background-color: #dee2e6;
+            color: #495057;
+            padding: 5px 10px;
+            border-radius: 5px;
+            margin-right: 10px;
+            margin-bottom: 75px;
+            font-size: 12px;
+            display: inline-block;
+        }
+        .short-box {
+            display: flex;
+            justify-content: space-between;
+        }
+        .short-box button {
+            padding: 10px;
+            border: none;
+            background-color: #ffffff;
+            cursor: pointer;
+        }
+        .short-box button.active {
+            color: blue;
+            border-bottom: 1px solid blue;
+        }
+        .days-left {
+          color: blue;
+        }
+        .advertisement {
+            margin-top: 20px;
+        }
+        .advertisement img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .contact-info {
+            background-color: #f8f9fa;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 10px;
+            border: 1px solid #dee2e6;
+        }
+        .contact-text {
+            font-size: 14px;
+            text-decoration: underline;
+        }
+        .expand-text {
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-buttons">
+            <img class="back-button" src="image/뒤로가기.png" alt="Back">
+            <h4>채용공고</h4>
+        </div>
+        <div class="header-buttons">
+            <img class="share-button" src="image/공유.png" alt="Share">
+            <img class="home-button" src="image/홈.png" alt="Home">
+        </div>
+    </header>
+    <div class="container">
+        <div class="job-announcement">
+            <div class="company-info">
+                <p class="company-name">(주)나희교육</p>
+                <p class="days-left">D-3</p>
+            </div>
+            <h2 class="announcement-title">[나희그룹 공개채용] 각 부문별 인재 모집</h2>
+            <hr class="divider">
+            <div class="tags">
+                <span class="tag">초대졸이상</span>
+                <span class="tag">정규직</span>
+                <span class="tag">회사 내규에 따름</span>
+            </div>
+            <div class="short-box">
+                <button class="short-info active">상세요강</button>
+                <button class="short-info">자소서항목</button>
+                <button class="short-info">기업정보</button>
+                <button class="short-info">추천공고</button>
+            </div>
+            <div class="announcement-text">
+            </div>
+            <hr class="divider">
+            <div class="expand-text"><h4>상세요강을 확대해서 볼 수 있어요</h4></div>
+            <div class="advertisement">
+                <img src="image/공고.jpg" alt="Advertisement">
+            </div>
+        </div>
+        <div class="contact-info">
+            <h4 class="contact-text">채용정보에 잘못된 내용이 있을 경우 문의해주세요.</h4>
+        </div>
+    </div>
+</body>
+</html>

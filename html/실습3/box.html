@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Box Layouts</title>
+<style>
+    .container {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-bottom: 20px;
+    }
+    .box {
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+        margin-inline: 10px;
+        margin-block: 10px;
+    }
+    .content-left {
+        position: relative;
+        padding: 10px;
+    }
+    .content-center {
+      text-align: center;
+      line-height: 100px;
+    }
+    .box-center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .box-center .box {
+        text-align: center;
+    }
+    .container-center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .box-left {
+        margin-right: auto;
+    }
+    .box-right {
+        margin-left: auto;
+    }
+    .big-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        border: 1px solid black;
+        width: fit-content;
+    }
+    .big-box {
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+        margin: 5px;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="content-left" style="left: 0;">content</div>
+        </div>
+    </div>
+    <hr>
+    <div class="container">
+        <div class="box">
+            <div class="content-center">content</div>
+        </div>
+    </div>
+    <hr>
+    <div class="container-center">
+        <div class="box"></div>
+    </div>
+    <hr>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+    <hr>
+    <div class="container">
+        <div class="box box-left"></div>
+        <div class="box box-center"></div>
+        <div class="box box-right"></div>
+    </div>
+    <hr>
+    <div class="big-container">
+      <div class="big-box-row">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+    <div class="big-box-row">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+    <div class="big-box-row">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+    </div>
+    <hr>
+    <div class="container">
+        <div class="box box-left"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+</html>
