@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Counter</title>
+</head>
+<body>
+  <div id="counter">0</div>
+  <button id="incrementBtn">버튼</button>
+
+  <script>
+    // 초기 카운터 값을 0으로 설정
+    let counterValue = 0;
+
+    const counterElement = document.getElementById("counter");
+    const incrementButton = document.getElementById("incrementBtn");
+
+    function incrementCounter() {
+      counterValue++;
+      counterElement.innerText = counterValue;
+    }
+
+    incrementButton.addEventListener("click", incrementCounter);
+  </script>
+</body>
+</html>

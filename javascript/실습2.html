@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text Color Change</title>
+</head>
+<body>
+  <h1 id="heading">color</h1>
+  <input type="text" id="colorInput">
+
+  <script>
+    const headingElement = document.getElementById("heading");
+    const colorInputElement = document.getElementById("colorInput");
+
+    colorInputElement.addEventListener("input", function() {
+      // 입력된 색상 값을 가져와 텍스트 색상으로 설정
+      headingElement.style.color = colorInputElement.value;
+    });
+  </script>
+</body>
+</html>
