@@ -16,12 +16,22 @@
     const counterElement = document.getElementById("counter");
     const incrementButton = document.getElementById("incrementBtn");
 
+    // (1)
     function incrementCounter() {
       counterValue++;
       counterElement.innerText = counterValue;
     }
 
     incrementButton.addEventListener("click", incrementCounter);
+
+    //(2)
+    // incrementButton.addEventListener('click', () => {
+    //   let number = Number(divTag.innerText)
+
+    //   number = number + 1
+    //   divTag.innerText = number
+    // })
+
   </script>
 </body>
 </html>

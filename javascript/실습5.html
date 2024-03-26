@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <title>고냥이</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+    <style type="text/css">
+      div.question-box {
+        margin: 10px 0 20px 0;
+      }
+      div.question-box > div {
+        margin-top: 30px;
+      }
+      
+    </style>
+
+    <script>
+      function q1() {
+        // 여기에 코드를 입력하세요
+        $.ajax({
+                    type: "GET",
+                    url: "https://api.thecatapi.com/v1/images/search",
+                    data: {},
+                    success: function (response) {
+                      let img_url = response[0]['url']
+                      $("#img-cat").attr("src", img_url);             
+                    }
+        })
+      }
+    </script>
+
+  </head>
+  <body>
+    <div class="question-box">
+      <h2>랜덤 고양이 사진 API를 이용하기</h2>
+      <button onclick="q1()">고양이를 보자</button>
+      <div>
+        <img id="img-cat" src="고양이를 진짜 본다"/>
+      </div>
+    </div>
+  </body>
+</html>
