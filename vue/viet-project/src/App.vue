@@ -1,24 +1,28 @@
 <template>
   <div>
-    <h1 :class="myClass">Hello, {{ myClass }}</h1>
+    <NavBarComponent @data-emitted="receiveDataFromNavBar" />
+    <div class="d-flex">
+      <AsideComponent />
+      <MainComponent />
+    </div>
+    <div v-if="receivedData">
+      Received Data: {{ receivedData }}
+    </div>
   </div>
 </template>
 
 <script setup>
+import { ref } from 'vue';
+import NavBarComponent from './components/NavBarComponent.vue';
+import MainComponent from './components/MainComponent.vue';
+import AsideComponent from './components/AsideComponent.vue';
 
-const myText = 'Vue 3'
-const myClass = ['bold', 'color', 'size']
+const receivedData = ref('');
 
+const receiveDataFromNavBar = (data) => {
+  receivedData.value = data;
+}
 </script>
 
 <style lang="scss" scoped>
-.bold {
-  font-weight: bold;
-}
-.color {
-  color: blueviolet;
-}
-.size {
-  font-size: 5rem;
-}
 </style>
